@@ -1,0 +1,24 @@
+Code Book:
+
+Here's a quick quide to the data structure so people can understand what's going on - I hope :)
+
+The data has many parts but is ultimately a set of records composed of a test and training set.
+In the main directory, feature, activity and README files provide more descriptive information 
+relating to the data and column names used in the data.
+
+In merging the data:
+  - I decided to rind X_test & X_train data followed by cbind'ing the subject data.
+  - I later add the activities once the IDs have been converted to names using the activity_labels file.
+
+To extract mean & standard deviation info from the data:
+  - I decided to use ony data having a mean() or std() in the colname.
+  - I left out other instances e.g. meanFreq, as I felt it wasn't a true calculated mean of values.
+
+In naming the variables in the final data, I used the following methodology:
+  - Names starting with a lowercase 'f' were renamed with a starting Frequency.
+  - Names starting with lowercase 't' were renamed starting with Time.
+  - General tidying included full names instead of short ones, capitalising terms & removing dulicates.
+  - I removed all unwanted chars "-", "(" & ")"
+  - I Attached a literal meaning to the X,Y & Z axis terms.
+  - Finally I removed leading and trailing whitespace & placed spaces between all terms to have it like a sentence.
+  
